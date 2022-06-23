@@ -9,10 +9,10 @@ public class Engine {
 
         System.out.println(rule);
 
-        final int ROUNDS_COUNT = 3;
+        final int roundsCount = 3;
 
         var i = 0;
-        while (i < ROUNDS_COUNT) {
+        while (i < roundsCount) {
             System.out.println("Question: " + gameData[i][0]);
             System.out.print("Your answer: ");
 
@@ -23,13 +23,14 @@ public class Engine {
                 System.out.println("Correct!");
                 i++;
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + gameData[i][1] + "'");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + gameData[i][1] + "'");
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }
         }
 
-        if (i == ROUNDS_COUNT) {
+        if (i == roundsCount) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }

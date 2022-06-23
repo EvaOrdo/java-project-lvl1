@@ -19,10 +19,10 @@ public class GCD {
 
     public static String[] getGameData() {
         String[] gameData = new String[2];
-        final int MIN_RANGE_NUMBER = 1;
-        final int MAX_RANGE_NUMBER = 100;
-        int firstNumber = Utils.getRandomNumber(MIN_RANGE_NUMBER, MAX_RANGE_NUMBER);
-        int secondNumber = Utils.getRandomNumber(MIN_RANGE_NUMBER, MAX_RANGE_NUMBER);
+        final int minRangeNum = 1;
+        final int maxRangeNum = 100;
+        int firstNumber = Utils.getRandomNumber(minRangeNum, maxRangeNum);
+        int secondNumber = Utils.getRandomNumber(minRangeNum, maxRangeNum);
         String question = firstNumber + " " + secondNumber;
         gameData[0] = question;
         int answer = getGCD(firstNumber, secondNumber);

@@ -14,9 +14,9 @@ public class Prime {
     }
 
     public static String[] getGameData() {
-        final int MIN_RANGE_NUM = 3;
-        final int MAX_RANGE_NUM = 100;
-        int randomNum = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
+        final int minRangeNum = 3;
+        final int maxRangeNum = 100;
+        int randomNum = Utils.getRandomNumber(minRangeNum, maxRangeNum);
         String question = "" + randomNum;
         String answer = isPrime(randomNum) ? "yes" : "no";
         String[] gameData = {question, answer};
@@ -34,7 +34,7 @@ public class Prime {
     public static final int ROUNDS_COUNT = 3;
     public static void prime() {
         String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String [][] gameData = getGameDataSet(ROUNDS_COUNT);
+        String[][] gameData = getGameDataSet(ROUNDS_COUNT);
 
         Engine.runEngine(rule, gameData);
     }

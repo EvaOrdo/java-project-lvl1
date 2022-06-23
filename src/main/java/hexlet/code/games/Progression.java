@@ -8,30 +8,32 @@ public class Progression {
         String[] gameData;
         gameData = new String[2];
 
-        final int MAX_PROGRESSION_START_NUM = 100;
-        int progressionStartNumber = Utils.getRandomNumber(1, MAX_PROGRESSION_START_NUM);
+        final int maxProgressionStartNum = 100;
+        int progressionStartNumber = Utils.getRandomNumber(1, maxProgressionStartNum);
 
-        final int MIN_GAP_NUM = 1;
-        final int MAX_GAP_NUM = 10;
+        final int minGapNum = 1;
+        final int maxGapNum = 10;
 
-        int progressionGapNum = Utils.getRandomNumber(MIN_GAP_NUM, MAX_GAP_NUM);
+        int progressionGapNum = Utils.getRandomNumber(minGapNum, maxGapNum);
 
-        final int PROGRESSION_LENGTH = 10;
+        final int progressionLength = 10;
 
-        int missingNumberIndex = Utils.getRandomNumber(1, PROGRESSION_LENGTH - 1);
-        
-        int[] progression = new int[PROGRESSION_LENGTH];
+        int missingNumberIndex = Utils.getRandomNumber(1, progressionLength - 1);
+
+        int[] progression = new int[progressionLength];
 
         progression[0] = progressionStartNumber;
         String question = "" + progressionStartNumber;
         String answer = "";
 
-        for (var i = 1; i < PROGRESSION_LENGTH; i++) {
+        for (var i = 1; i < progressionLength; i++) {
             progression[i] = progression[i - 1] + progressionGapNum;
             if (i == missingNumberIndex) {
                 question += " ..";
                 answer += progression[i];
-            } else question += " " + progression[i];
+            } else {
+                question += " " + progression[i];
+            }
         }
 
         gameData[0] = question;

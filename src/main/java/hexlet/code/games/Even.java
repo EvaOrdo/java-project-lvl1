@@ -7,9 +7,9 @@ public class Even {
     public static String[] getGameData() {
         String[] gameData;
         gameData = new String[2];
-        final int MIN_RANGE_NUM = 1;
-        final int MAX_RANGE_NUM = 100;
-        int randomNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
+        final int minRangeNum = 1;
+        final int maxRangeNum = 100;
+        int randomNumber = Utils.getRandomNumber(minRangeNum, maxRangeNum);
         String question = "" + randomNumber;
         gameData[0] = question;
         String correctAnswer = randomNumber % 2 == 0 ? "yes" : "no";

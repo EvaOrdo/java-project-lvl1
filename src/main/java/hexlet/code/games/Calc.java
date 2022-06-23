@@ -6,12 +6,12 @@ import hexlet.code.Utils;
 public class Calc {
     public static String[] getGameData() {
         String[] gameData = new String[2];
-        final int MIN_RANGE_NUMBER = 1;
-        final int MAX_RANGE_NUMBER = 100;
+        final int minRangeNumber = 1;
+        final int maxRangeNumber = 100;
         String[] operands = {"+", "-", "*"};
         int operandsLength = operands.length;
-        int firstNumber = Utils.getRandomNumber(MIN_RANGE_NUMBER, MAX_RANGE_NUMBER);
-        int secondNumber = Utils.getRandomNumber(MIN_RANGE_NUMBER, MAX_RANGE_NUMBER);
+        int firstNumber = Utils.getRandomNumber(minRangeNumber, maxRangeNumber);
+        int secondNumber = Utils.getRandomNumber(minRangeNumber, maxRangeNumber);
         int randomOperandsIndex = Utils.getRandomNumber(0, operandsLength);
         String question = firstNumber + " " + operands[randomOperandsIndex] + " " + secondNumber;
         gameData[0] = question;
