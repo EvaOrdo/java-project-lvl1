@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Progression {
     static final int MIN_PROGRESSION_FIRST_NUM = 1;
-    static final int MAX_PROGRESSiON_FIRST_NUM = 100;
+    static final int MAX_PROGRESSION_FIRST_NUM = 100;
     static final int MIN_PROGRESSION_STEP = 1;
     static final int MAX_PROGRESSION_STEP = 10;
     static final int PROGRESSION_LENGTH = 10;
@@ -14,7 +14,7 @@ public class Progression {
         String[] gameData;
         gameData = new String[2];
 
-        int progressionStartNumber = Utils.getRandomNumber(MIN_PROGRESSION_FIRST_NUM, MAX_PROGRESSiON_FIRST_NUM);
+        int progressionStartNumber = Utils.getRandomNumber(MIN_PROGRESSION_FIRST_NUM, MAX_PROGRESSION_FIRST_NUM);
         int progressionStep = Utils.getRandomNumber(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
 
         int missingNumberIndex = Utils.getRandomNumber(1, PROGRESSION_LENGTH - 1);
