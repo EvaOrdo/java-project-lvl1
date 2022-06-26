@@ -26,8 +26,6 @@ public class Calc {
         return gameData;
     }
 
-    public static final int ROUNDS_COUNT = 3;
-
     public static String[][] getGameDataSet(int roundsCount) {
         String[][] gameDataSet;
         gameDataSet = new String[roundsCount][];
@@ -38,7 +36,7 @@ public class Calc {
     }
     public static void calc() {
         String rule = "What is the result of the expression?";
-        String[][] gameData = getGameDataSet(ROUNDS_COUNT);
+        String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
         Engine.runEngine(rule, gameData);
     }

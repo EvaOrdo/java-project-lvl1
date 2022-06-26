@@ -4,19 +4,18 @@ import java.util.Scanner;
 
 public class Engine {
 
+    public static final int ROUNDS_COUNT = 3;
+
     public static void runEngine(String rule, String[][] gameData) {
-        Scanner sc = new Scanner(System.in);
+        Scanner getUserName = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        String userName = sc.nextLine();
+        String userName = getUserName.nextLine();
         System.out.println("Hello, " + userName + "!");
 
         System.out.println(rule);
 
-        final int roundsCount = 3;
-
-        var i = 0;
-        while (i < roundsCount) {
+        for (var i = 0; i < ROUNDS_COUNT; i++) {
             System.out.println("Question: " + gameData[i][0]);
             System.out.print("Your answer: ");
 
@@ -25,17 +24,13 @@ public class Engine {
 
             if (userAnswer.equals(gameData[i][1])) {
                 System.out.println("Correct!");
-                i++;
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
                         + gameData[i][1] + "'");
                 System.out.println("Let's try again, " + userName + "!");
-                break;
+                return;
             }
         }
-
-        if (i == roundsCount) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

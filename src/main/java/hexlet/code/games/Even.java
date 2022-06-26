@@ -17,8 +17,6 @@ public class Even {
         return gameData;
     }
 
-    public static final int ROUNDS_COUNT = 3;
-
     public static String[][] getGameDataSet(int roundsCount) {
         String[][] gameDataSet;
         gameDataSet = new String[roundsCount][];
@@ -29,7 +27,7 @@ public class Even {
     }
     public static void isEven() {
         String rule = "Answer 'yes' if number is even otherwise answer 'no'.";
-        String[][] gameData = getGameDataSet(ROUNDS_COUNT);
+        String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
         Engine.runEngine(rule, gameData);
     }

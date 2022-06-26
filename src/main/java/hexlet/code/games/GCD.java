@@ -31,8 +31,6 @@ public class GCD {
         return gameData;
     }
 
-    public static final int ROUNDS_COUNT = 3;
-
     public static String[][] getGameDataSet(int roundsCount) {
         String[][] gameDataSet;
         gameDataSet = new String[roundsCount][];
@@ -44,7 +42,7 @@ public class GCD {
 
     public static void gcd() {
         String rule = "Find the greatest common divisor of given numbers";
-        String[][] gameData = getGameDataSet(ROUNDS_COUNT);
+        String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
         Engine.runEngine(rule, gameData);
     }
