@@ -40,7 +40,7 @@ public class GCD {
         return gameDataSet;
     }
 
-    public static void gcd() {
+    public static void startGCD() {
         String rule = "Find the greatest common divisor of given numbers";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 

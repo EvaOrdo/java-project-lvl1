@@ -34,7 +34,7 @@ public class Calc {
         }
         return gameDataSet;
     }
-    public static void calc() {
+    public static void startCalc() {
         String rule = "What is the result of the expression?";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 

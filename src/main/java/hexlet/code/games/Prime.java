@@ -31,7 +31,7 @@ public class Prime {
         return gameDataSet;
     }
 
-    public static void prime() {
+    public static void startPrime() {
         String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 

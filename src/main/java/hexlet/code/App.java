@@ -16,11 +16,11 @@ public class App {
         String gameNumber = getGameNumber.nextLine();
         switch (gameNumber) {
             case "1" -> Cli.greeting();
-            case "2" -> Even.isEven();
-            case "3" -> Calc.calc();
-            case "4" -> GCD.gcd();
-            case "5" -> Progression.progression();
-            case "6" -> Prime.prime();
+            case "2" -> Even.startEven();
+            case "3" -> Calc.startCalc();
+            case "4" -> GCD.startGCD();
+            case "5" -> Progression.startProgression();
+            case "6" -> Prime.startPrime();
             case "0" -> System.out.println("Bye!");
             default -> System.out.println("There is no such game!");
         }

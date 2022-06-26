@@ -50,7 +50,7 @@ public class Progression {
         return gameDataSet;
     }
 
-    public static void progression() {
+    public static void startProgression() {
         String rule = "What number is missing in the progression?";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
