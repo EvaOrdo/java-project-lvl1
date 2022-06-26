@@ -9,9 +9,8 @@ import hexlet.code.games.Prime;
 
 public class App {
     public static void main(String[] args) {
-        String menu = "1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit";
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println(menu);
+        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
         Scanner getGameNumber = new Scanner(System.in);
         String gameNumber = getGameNumber.nextLine();
