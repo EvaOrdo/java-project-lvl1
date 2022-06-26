@@ -7,10 +7,10 @@ public class Engine {
     public static final int ROUNDS_COUNT = 3;
 
     public static void runEngine(String rule, String[][] gameData) {
-        Scanner getUserName = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        String userName = getUserName.nextLine();
+        String userName = scan.nextLine();
         System.out.println("Hello, " + userName + "!");
 
         System.out.println(rule);
@@ -19,8 +19,7 @@ public class Engine {
             System.out.println("Question: " + gameData[i][0]);
             System.out.print("Your answer: ");
 
-            Scanner getUserAnswer = new Scanner(System.in);
-            String userAnswer = getUserAnswer.nextLine();
+            String userAnswer = scan.nextLine();
 
             if (userAnswer.equals(gameData[i][1])) {
                 System.out.println("Correct!");
@@ -31,6 +30,7 @@ public class Engine {
                 return;
             }
         }
+        scan.close();
         System.out.println("Congratulations, " + userName + "!");
     }
 }
