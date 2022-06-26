@@ -4,12 +4,14 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
+    static final int MIN_RANGE_NUM = 1;
+    static final int MAX_RANGE_NUM = 100;
+
     public static String[] getGameData() {
         String[] gameData;
         gameData = new String[2];
-        final int minRangeNum = 1;
-        final int maxRangeNum = 100;
-        int randomNumber = Utils.getRandomNumber(minRangeNum, maxRangeNum);
+        int randomNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
+
         String question = "" + randomNumber;
         gameData[0] = question;
         String correctAnswer = randomNumber % 2 == 0 ? "yes" : "no";

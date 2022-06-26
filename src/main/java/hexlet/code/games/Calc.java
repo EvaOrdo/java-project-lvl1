@@ -4,18 +4,19 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
+    static final int MIN_RANGE_NUM = 1;
+    static final int MAX_RANGE_NUM = 100;
+    static final String[] OPERANDS = {"+", "-", "*"};
+
     public static String[] getGameData() {
         String[] gameData = new String[2];
-        final int minRangeNumber = 1;
-        final int maxRangeNumber = 100;
-        String[] operands = {"+", "-", "*"};
-        int operandsLength = operands.length;
-        int firstNumber = Utils.getRandomNumber(minRangeNumber, maxRangeNumber);
-        int secondNumber = Utils.getRandomNumber(minRangeNumber, maxRangeNumber);
+        int operandsLength = OPERANDS.length;
+        int firstNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
+        int secondNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
         int randomOperandsIndex = Utils.getRandomNumber(0, operandsLength);
-        String question = firstNumber + " " + operands[randomOperandsIndex] + " " + secondNumber;
+        String question = firstNumber + " " + OPERANDS[randomOperandsIndex] + " " + secondNumber;
         gameData[0] = question;
-        int answer = switch (operands[randomOperandsIndex]) {
+        int answer = switch (OPERANDS[randomOperandsIndex]) {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;
             case "*" -> firstNumber * secondNumber;

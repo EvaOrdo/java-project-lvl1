@@ -4,30 +4,29 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
+    static final int MIN_PROGRESSION_FIRST_NUM = 1;
+    static final int MAX_PROGRESSiON_FIRST_NUM = 100;
+    static final int MIN_PROGRESSION_STEP = 1;
+    static final int MAX_PROGRESSION_STEP = 10;
+    static final int PROGRESSION_LENGTH = 10;
+
     public static String[] getGameData() {
         String[] gameData;
         gameData = new String[2];
 
-        final int maxProgressionStartNum = 100;
-        int progressionStartNumber = Utils.getRandomNumber(1, maxProgressionStartNum);
+        int progressionStartNumber = Utils.getRandomNumber(MIN_PROGRESSION_FIRST_NUM, MAX_PROGRESSiON_FIRST_NUM);
+        int progressionStep = Utils.getRandomNumber(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
 
-        final int minGapNum = 1;
-        final int maxGapNum = 10;
+        int missingNumberIndex = Utils.getRandomNumber(1, PROGRESSION_LENGTH - 1);
 
-        int progressionGapNum = Utils.getRandomNumber(minGapNum, maxGapNum);
-
-        final int progressionLength = 10;
-
-        int missingNumberIndex = Utils.getRandomNumber(1, progressionLength - 1);
-
-        int[] progression = new int[progressionLength];
+        int[] progression = new int[PROGRESSION_LENGTH];
 
         progression[0] = progressionStartNumber;
         String question = "" + progressionStartNumber;
         String answer = "";
 
-        for (var i = 1; i < progressionLength; i++) {
-            progression[i] = progression[i - 1] + progressionGapNum;
+        for (var i = 1; i < PROGRESSION_LENGTH; i++) {
+            progression[i] = progression[i - 1] + progressionStep;
             if (i == missingNumberIndex) {
                 question += " ..";
                 answer += progression[i];

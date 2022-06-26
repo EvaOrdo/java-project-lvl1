@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
+    static final int MIN_RANGE_NUM = 1;
+    static final int MAX_RANGE_NUM = 100;
     public static int getGCD(int num1, int num2) {
         var a = num1;
         var b = num2;
@@ -19,10 +21,8 @@ public class GCD {
 
     public static String[] getGameData() {
         String[] gameData = new String[2];
-        final int minRangeNum = 1;
-        final int maxRangeNum = 100;
-        int firstNumber = Utils.getRandomNumber(minRangeNum, maxRangeNum);
-        int secondNumber = Utils.getRandomNumber(minRangeNum, maxRangeNum);
+        int firstNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
+        int secondNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
         String question = firstNumber + " " + secondNumber;
         gameData[0] = question;
         int answer = getGCD(firstNumber, secondNumber);

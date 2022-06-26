@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
+    static final int MIN_RANGE_NUMBER = 3;
+    static final int MAX_RANGE_NUMBER = 100;
 
     public static Boolean isPrime(int number) {
         for (var i = 2; i <= Math.sqrt(number); i++) {
@@ -14,9 +16,7 @@ public class Prime {
     }
 
     public static String[] getGameData() {
-        final int minRangeNum = 3;
-        final int maxRangeNum = 100;
-        int randomNum = Utils.getRandomNumber(minRangeNum, maxRangeNum);
+        int randomNum = Utils.getRandomNumber(MIN_RANGE_NUMBER, MAX_RANGE_NUMBER);
         String question = "" + randomNum;
         String answer = isPrime(randomNum) ? "yes" : "no";
         String[] gameData = {question, answer};
