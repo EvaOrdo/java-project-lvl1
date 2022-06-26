@@ -8,6 +8,16 @@ public class Calc {
     static final int MAX_RANGE_NUM = 100;
     static final String[] OPERANDS = {"+", "-", "*"};
 
+    public static int calculate(int num1, int num2, String operand) {
+        int result = switch (operand) {
+            case "+" -> num1 + num2;
+            case "-" -> num1 - num2;
+            case "*" -> num1 * num2;
+            default -> throw new RuntimeException("Unknown operand");
+        };
+        return result;
+    }
+
     public static String[] getGameData() {
         String[] gameData = new String[2];
         int operandsLength = OPERANDS.length;
@@ -16,12 +26,7 @@ public class Calc {
         int randomOperandsIndex = Utils.getRandomNumber(0, operandsLength);
         String question = firstNumber + " " + OPERANDS[randomOperandsIndex] + " " + secondNumber;
         gameData[0] = question;
-        int answer = switch (OPERANDS[randomOperandsIndex]) {
-            case "+" -> firstNumber + secondNumber;
-            case "-" -> firstNumber - secondNumber;
-            case "*" -> firstNumber * secondNumber;
-            default -> 0;
-        };
+        int answer = calculate(firstNumber, secondNumber, OPERANDS[randomOperandsIndex]);
         String correctAnswer = "" + answer;
         gameData[1] = correctAnswer;
         return gameData;
