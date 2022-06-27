@@ -21,17 +21,11 @@ public class Even {
         return gameData;
     }
 
-    public static String[][] getGameDataSet(int roundsCount) {
-        String[][] gameDataSet;
-        gameDataSet = new String[roundsCount][];
-        for (var i = 0; i < roundsCount; i++) {
+    public static void start() {
+        String[][] gameDataSet = new String[Engine.ROUNDS_COUNT][];
+        for (var i = 0; i < Engine.ROUNDS_COUNT; i++) {
             gameDataSet[i] = getGameRoundData();
         }
-        return gameDataSet;
-    }
-    public static void start() {
-        String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
-
-        Engine.runEngine(RULE, gameData);
+        Engine.runEngine(RULE, gameDataSet);
     }
 }
