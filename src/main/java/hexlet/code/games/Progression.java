@@ -11,7 +11,7 @@ public class Progression {
     static final int PROGRESSION_LENGTH = 10;
     static final String RULE = "What number is missing in the progression?";
 
-    public static String[] getGameData() {
+    public static String[] getGameRoundData() {
         String[] gameData;
         gameData = new String[2];
 
@@ -45,7 +45,7 @@ public class Progression {
         String[][] gameDataSet;
         gameDataSet = new String[roundsCount][];
         for (var i = 0; i < roundsCount; i++) {
-            gameDataSet[i] = getGameData();
+            gameDataSet[i] = getGameRoundData();
         }
         return gameDataSet;
     }

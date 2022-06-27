@@ -19,7 +19,7 @@ public class Calc {
         return result;
     }
 
-    public static String[] getGameData() {
+    public static String[] getGameRoundData() {
         String[] gameData = new String[2];
         int operandsLength = OPERANDS.length;
         int firstNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
@@ -37,7 +37,7 @@ public class Calc {
         String[][] gameDataSet;
         gameDataSet = new String[roundsCount][];
         for (var i = 0; i < roundsCount; i++) {
-            gameDataSet[i] = getGameData();
+            gameDataSet[i] = getGameRoundData();
         }
         return gameDataSet;
     }

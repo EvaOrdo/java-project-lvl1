@@ -9,7 +9,7 @@ public class Even {
     static final String RULE = "Answer 'yes' if number is even otherwise answer 'no'.";
 
 
-    public static String[] getGameData() {
+    public static String[] getGameRoundData() {
         String[] gameData;
         gameData = new String[2];
         int randomNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
@@ -25,7 +25,7 @@ public class Even {
         String[][] gameDataSet;
         gameDataSet = new String[roundsCount][];
         for (var i = 0; i < roundsCount; i++) {
-            gameDataSet[i] = getGameData();
+            gameDataSet[i] = getGameRoundData();
         }
         return gameDataSet;
     }

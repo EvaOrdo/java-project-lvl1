@@ -16,7 +16,7 @@ public class Prime {
         } return true;
     }
 
-    public static String[] getGameData() {
+    public static String[] getGameRoundData() {
         int randomNum = Utils.getRandomNumber(MIN_RANGE_NUMBER, MAX_RANGE_NUMBER);
         String question = "" + randomNum;
         String answer = isPrime(randomNum) ? "yes" : "no";
@@ -27,7 +27,7 @@ public class Prime {
     public static String[][] getGameDataSet(int roundsCount) {
         String[][] gameDataSet = new String[roundsCount][];
         for (var i = 0; i < roundsCount; i++) {
-            gameDataSet[i] = getGameData();
+            gameDataSet[i] = getGameRoundData();
         }
         return gameDataSet;
     }
