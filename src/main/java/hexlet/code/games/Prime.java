@@ -32,7 +32,7 @@ public class Prime {
         return gameDataSet;
     }
 
-    public static void startPrime() {
+    public static void start() {
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
         Engine.runEngine(RULE, gameData);

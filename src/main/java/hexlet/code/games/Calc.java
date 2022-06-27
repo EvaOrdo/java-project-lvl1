@@ -41,7 +41,7 @@ public class Calc {
         }
         return gameDataSet;
     }
-    public static void startCalc() {
+    public static void start() {
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
         Engine.runEngine(RULE, gameData);
