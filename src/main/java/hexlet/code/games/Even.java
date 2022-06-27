@@ -8,7 +8,9 @@ public class Even {
     static final int MAX_RANGE_NUM = 100;
     static final String RULE = "Answer 'yes' if number is even otherwise answer 'no'.";
 
-
+    public static Boolean isEven(int number) {
+        return number % 2 == 0;
+    }
     public static String[] getGameRoundData() {
         String[] gameData;
         gameData = new String[2];
@@ -16,7 +18,7 @@ public class Even {
 
         String question = "" + randomNumber;
         gameData[0] = question;
-        String correctAnswer = randomNumber % 2 == 0 ? "yes" : "no";
+        String correctAnswer = isEven(randomNumber) ? "yes" : "no";
         gameData[1] = correctAnswer;
         return gameData;
     }
