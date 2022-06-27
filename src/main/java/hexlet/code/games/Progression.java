@@ -28,17 +28,17 @@ public class Progression {
 
         int[] progression = buildProgression(progressionStartNumber, progressionStep);
         int missingNum = progression[missingNumberIndex];
-        String question = "";
+        StringBuilder question = new StringBuilder();
         String answer = "" + missingNum;
         for (var item: progression) {
             if (item == missingNum) {
-                question += " ..";
+                question.append(" ..");
             } else {
-                question += " " + item;
+                question.append(" ").append(item);
             }
         }
 
-        gameData[0] = question;
+        gameData[0] = question.toString();
         gameData[1] = answer;
         return gameData;
     }
