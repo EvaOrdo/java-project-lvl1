@@ -9,8 +9,8 @@ public class Prime {
     static final String RULE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static Boolean isPrime(int number) {
-        if (number < 0 || number == 1 || number == 2) {
-            return true;
+        if (number <= 1) {
+            return false;
         }
         for (var i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
