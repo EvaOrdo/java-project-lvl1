@@ -24,5 +24,6 @@ public class App {
             case "0" -> System.out.println("Bye!");
             default -> System.out.println("There is no such game!");
         }
+        getGameNumber.close();
     }
 }
