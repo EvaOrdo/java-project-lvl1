@@ -38,7 +38,7 @@ public class Progression {
             }
         }
 
-        gameData[0] = question.toString();
+        gameData[0] = question.toString().trim();
         gameData[1] = answer;
         return gameData;
     }
