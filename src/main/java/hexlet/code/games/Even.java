@@ -6,6 +6,8 @@ import hexlet.code.Utils;
 public class Even {
     static final int MIN_RANGE_NUM = 1;
     static final int MAX_RANGE_NUM = 100;
+    static final String RULE = "Answer 'yes' if number is even otherwise answer 'no'.";
+
 
     public static String[] getGameData() {
         String[] gameData;
@@ -28,9 +30,8 @@ public class Even {
         return gameDataSet;
     }
     public static void startEven() {
-        String rule = "Answer 'yes' if number is even otherwise answer 'no'.";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
-        Engine.runEngine(rule, gameData);
+        Engine.runEngine(RULE, gameData);
     }
 }

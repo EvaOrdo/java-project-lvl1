@@ -7,6 +7,7 @@ public class Calc {
     static final int MIN_RANGE_NUM = 1;
     static final int MAX_RANGE_NUM = 100;
     static final String[] OPERANDS = {"+", "-", "*"};
+    static final String RULE = "What is the result of the expression?";
 
     public static int calculate(int num1, int num2, String operand) {
         int result = switch (operand) {
@@ -41,9 +42,8 @@ public class Calc {
         return gameDataSet;
     }
     public static void startCalc() {
-        String rule = "What is the result of the expression?";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
-        Engine.runEngine(rule, gameData);
+        Engine.runEngine(RULE, gameData);
     }
 }

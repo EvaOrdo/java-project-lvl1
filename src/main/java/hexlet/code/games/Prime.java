@@ -6,6 +6,7 @@ import hexlet.code.Utils;
 public class Prime {
     static final int MIN_RANGE_NUMBER = 3;
     static final int MAX_RANGE_NUMBER = 100;
+    static final String RULE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static Boolean isPrime(int number) {
         for (var i = 2; i <= Math.sqrt(number); i++) {
@@ -32,9 +33,8 @@ public class Prime {
     }
 
     public static void startPrime() {
-        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
-        Engine.runEngine(rule, gameData);
+        Engine.runEngine(RULE, gameData);
     }
 }

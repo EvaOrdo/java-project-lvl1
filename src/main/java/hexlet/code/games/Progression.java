@@ -9,6 +9,7 @@ public class Progression {
     static final int MIN_PROGRESSION_STEP = 1;
     static final int MAX_PROGRESSION_STEP = 10;
     static final int PROGRESSION_LENGTH = 10;
+    static final String RULE = "What number is missing in the progression?";
 
     public static String[] getGameData() {
         String[] gameData;
@@ -50,9 +51,8 @@ public class Progression {
     }
 
     public static void startProgression() {
-        String rule = "What number is missing in the progression?";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
-        Engine.runEngine(rule, gameData);
+        Engine.runEngine(RULE, gameData);
     }
 }

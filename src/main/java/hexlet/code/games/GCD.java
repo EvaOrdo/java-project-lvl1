@@ -6,6 +6,8 @@ import hexlet.code.Utils;
 public class GCD {
     static final int MIN_RANGE_NUM = 1;
     static final int MAX_RANGE_NUM = 100;
+    static final String RULE = "Find the greatest common divisor of given numbers";
+
     public static int getGCD(int num1, int num2) {
         var a = num1;
         var b = num2;
@@ -41,9 +43,8 @@ public class GCD {
     }
 
     public static void startGCD() {
-        String rule = "Find the greatest common divisor of given numbers";
         String[][] gameData = getGameDataSet(Engine.ROUNDS_COUNT);
 
-        Engine.runEngine(rule, gameData);
+        Engine.runEngine(RULE, gameData);
     }
 }
