@@ -13,7 +13,7 @@ public class Calc {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;
             case "*" -> num1 * num2;
-            default -> throw new RuntimeException("Unknown operand");
+            default -> throw new RuntimeException("Unknown operand: " + operand);
         };
         return result;
     }
