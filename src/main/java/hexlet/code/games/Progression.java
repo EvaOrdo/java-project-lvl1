@@ -13,9 +13,10 @@ public class Progression {
 
     public static int[] buildProgression(int startNum, int step) {
         int[] progression = new int[PROGRESSION_LENGTH];
-        progression[0] = startNum;
-        for (var i = 1; i < PROGRESSION_LENGTH; i++) {
-            progression[i] = progression[i - 1] + step;
+        int current = startNum;
+        for (var i = 0; i < PROGRESSION_LENGTH; i++) {
+            progression[i] = current;
+            current += step;
         }
         return progression;
     }
