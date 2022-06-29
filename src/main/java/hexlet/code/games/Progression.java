@@ -8,13 +8,12 @@ public class Progression {
     static final int MAX_PROGRESSION_FIRST_NUM = 100;
     static final int MIN_PROGRESSION_STEP = 1;
     static final int MAX_PROGRESSION_STEP = 10;
-    static final int PROGRESSION_LENGTH = 10;
     static final String RULE = "What number is missing in the progression?";
 
-    public static int[] buildProgression(int startNum, int step) {
-        int[] progression = new int[PROGRESSION_LENGTH];
+    public static int[] buildProgression(int startNum, int step, int progressionLength) {
+        int[] progression = new int[progressionLength];
         int current = startNum;
-        for (var i = 0; i < PROGRESSION_LENGTH; i++) {
+        for (var i = 0; i < progressionLength; i++) {
             progression[i] = current;
             current += step;
         }
@@ -25,9 +24,12 @@ public class Progression {
         gameData = new String[2];
         int progressionStartNumber = Utils.getRandomNumber(MIN_PROGRESSION_FIRST_NUM, MAX_PROGRESSION_FIRST_NUM);
         int progressionStep = Utils.getRandomNumber(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
-        int missingNumberIndex = Utils.getRandomNumber(1, PROGRESSION_LENGTH - 1);
+        final int minLength = 10;
+        final int maxLength = 20;
+        int progressionLength = Utils.getRandomNumber(minLength, maxLength);
+        int missingNumberIndex = Utils.getRandomNumber(1, progressionLength - 1);
 
-        int[] progression = buildProgression(progressionStartNumber, progressionStep);
+        int[] progression = buildProgression(progressionStartNumber, progressionStep, progressionLength);
         int missingNum = progression[missingNumberIndex];
         StringBuilder question = new StringBuilder();
         String answer = "" + missingNum;
