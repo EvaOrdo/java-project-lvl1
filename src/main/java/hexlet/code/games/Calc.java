@@ -6,28 +6,28 @@ import hexlet.code.Utils;
 public class Calc {
     static final int MIN_RANGE_NUM = 1;
     static final int MAX_RANGE_NUM = 100;
-    static final String[] OPERANDS = {"+", "-", "*"};
+    static final String[] OPERATORS = {"+", "-", "*"};
     static final String RULE = "What is the result of the expression?";
 
-    public static int calculate(int num1, int num2, String operand) {
-        int result = switch (operand) {
+    public static int calculate(int num1, int num2, String operator) {
+        int result = switch (operator) {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;
             case "*" -> num1 * num2;
-            default -> throw new RuntimeException("Unknown operand: " + operand);
+            default -> throw new RuntimeException("Unknown operand: " + operator);
         };
         return result;
     }
 
     public static String[] getGameRoundData() {
         String[] gameData = new String[2];
-        int operandsLength = OPERANDS.length;
+        int operatorsLength = OPERATORS.length;
         int firstNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
         int secondNumber = Utils.getRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
-        int randomOperandsIndex = Utils.getRandomNumber(0, operandsLength);
-        String question = firstNumber + " " + OPERANDS[randomOperandsIndex] + " " + secondNumber;
+        int randomOperandsIndex = Utils.getRandomNumber(0, operatorsLength);
+        String question = firstNumber + " " + OPERATORS[randomOperandsIndex] + " " + secondNumber;
         gameData[0] = question;
-        int answer = calculate(firstNumber, secondNumber, OPERANDS[randomOperandsIndex]);
+        int answer = calculate(firstNumber, secondNumber, OPERATORS[randomOperandsIndex]);
         String correctAnswer = "" + answer;
         gameData[1] = correctAnswer;
         return gameData;
